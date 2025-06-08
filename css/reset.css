@@ -17,7 +17,7 @@ html:focus-within {
 }
 
 body {
-  max-height: 100dvh;
+  min-height: 100dvh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
