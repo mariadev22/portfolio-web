@@ -1,0 +1,26 @@
+@import url("reset.css");
+
+:root {
+    --secundary: #d32f2f
+    --contacts: #ff6659
+    --primary: #ffcdd2
+    --background: #ededed
+    --text-color: #333
+}
+
+
+body {
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 6rem;
+    color: var(--text-color)
+}
+
+
+
+
