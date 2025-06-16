@@ -1,0 +1,74 @@
+---
+import Section from '../components/Section.astro'
+
+import { education } from '../data/cv.json'
+---
+
+<!-- Education -->
+<Section title="Educación">
+    <ul>
+       {
+        education.map(({institution, url, area, startDate, endDate, course, }) => {
+            const startYear = startDate ? new Date(startDate).getFullYear() : null
+            const endYear = endDate ? new Date(endDate).getFullYear() : "Actual"
+            const years = startYear ? `${startYear} - ${endYear}` : `${endYear}`
+            return (
+                <li>
+                    <article>
+                        <header>
+                            <div>
+                                <h3>
+                                    <a href={url} title={institution} target="_blank">
+                                        {institution}
+                                    </a>
+                                </h3>
+                                {
+                                    area ? <h4>{area}</h4> : <h4>{course}</h4>
+                                }
+                            </div>
+                            <time>{years}</time>
+                        </header>
+                    </article>
+                </li>
+            )
+        })
+       } 
+    </ul>
+</Section>
+
+<style>
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    article h3 {
+        font-weight: 500;
+    }
+
+    article a {
+        color: inherit;
+    }
+    article a:hover {
+        text-decoration: underline;
+        line-height: 1.2rem;
+        margin-bottom: 4px;
+    }
+
+    article h4 {
+        font-weight: 400;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
+
+    time {
+        color: oklch(37% 0.013 285.805);
+        font-size: 0.85rem;
+    }
+</style>

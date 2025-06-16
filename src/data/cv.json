@@ -1,0 +1,192 @@
+{
+  "basics": {
+    "name": "María Martínez",
+    "label": "Full Stack developer orientada al detalle, dedicada a desarrollar productos de alta calidad.",
+    "image": "src/assets/image/image-profile.jpg",
+    "email": "mariamartinezdev22@gmail.com",
+    "phone": "+58 4261878763",
+    "url": "",
+    "summary": "Soy una desarrolladora Full Stack enfocada en frontend que disfruta explorando nuevas tecnologías y desarrollando soluciones de software. Actualmente estudio Ingeniería Informática en la Universidad Nacional Experimental de Guayana.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Ciudad Guayana",
+      "countryCode": "",
+      "region": "Venezuela"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "mariadev22",
+        "url": "https://linkedin.com/in/mariadev22"
+      },
+      {
+        "network": "GitHub",
+        "username": "María Martínez",
+        "url": "https://github.com/mariadev22"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Company",
+      "position": "President",
+      "url": "https://company.com",
+      "startDate": "2013-01-01",
+      "endDate": "2014-01-01",
+      "summary": "Description…",
+      "highlights": ["Started the company"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Nacional Experimental de Guayana",
+      "url": "https://uneg.edu.ve/",
+      "area": "Ingeniería en Informática",
+      "studyType": "",
+      "startDate": "Febrero 2012",
+      "endDate": "",
+      "score": "",
+      "course": ""
+    },
+    {
+      "institution": "Código Facilito",
+      "url": "https://codigofacilito.com/",
+      "area": "",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "Junio 2025",
+      "score": "",
+      "course": "Bootcamp Premium de Desarrollo Web Frontend"
+    },
+    {
+      "institution": "Código Facilito",
+      "url": "https://codigofacilito.com/",
+      "area": "",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "Junio 2025",
+      "score": "",
+      "course": "Bootcamp de GitHub Foundations"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Microsoft Certified: Azure Data Fundamentals",
+      "date": "Abril 2025",
+      "issuer": "Microsoft Azure",
+      "url": "https://learn.microsoft.com/api/credentials/share/es-es/MaraMartnez-1169/7BDC73B023F29B58?sharingId=47B44C4E98AFC9A3"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Intermedio",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Intermedio",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Intermedio",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Principiante",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Intermedio",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Intermedio",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Principiante",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Intermedio",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Intermedio",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    },
+    {
+      "name": "Astro",
+      "level": "Intermedio",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "JavaScript Framework",
+        "Static Generation"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Principiante",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Native speaker"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Porfolio",
+      "isActive": true,
+      "description": "Un portafolio minimalista configurable a través de un JSON.",
+      "skills": ["HTML", "CSS", "JavaScript", "Astro"],
+      "url": "mariadev22.github.io/portfolio-web/"
+    },
+    {
+      "name": "midu.links",
+      "isActive": true,
+      "description": "Proyecto de práctica con Tailwind CSS basado en el curso de midudev.",
+      "skills": ["HTML", "Tailwind"],
+      "url": "mariadev22.github.io/midu-links/"
+    },
+    {
+      "name": "8-Puzzle",
+      "isActive": true,
+      "description": "Proyecto académico en Python que implementa dos agentes inteligentes capaces de resolver el clásico Puzzle 8 de manera autónoma.",
+      "skills": ["Python", "PyGame"],
+      "url": "https://github.com/mariadev22/resolucion-automatizada-puzzle8.git"
+    }
+  ]
+}

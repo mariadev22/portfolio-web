@@ -1,0 +1,91 @@
+---
+import Section from '../components/Section.astro'
+
+import { projects } from '../data/cv.json'
+---
+
+<!-- Projects -->
+<Section title="Proyectos">
+    <ul>
+        {
+            projects.map(({url, description, skills, name, isActive}) => {
+                return (
+                    <li>
+                        <article>
+                            <header>
+                                <h3>
+                                    <a href={url} title={`Ver el proyecto ${name}`} target="_blank">
+                                        {name}
+                                    </a>
+                                    {
+                                        isActive && <span>&bull;</span>
+                                    }
+                                </h3>
+                                <p>{description}</p>
+                            </header>
+                            <footer>
+                                
+                                {skills.map((skills) => {
+                                    return <span>{skills}</span>
+                                })}
+                            
+                            </footer>
+                        </article>
+                    </li>
+                )
+            })
+        }
+    </ul>
+</Section>
+
+<style>
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    article{
+        border-radius: 8px;
+        border: 1px solid oklch(92.4% 0.12 95.746);
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        height: 100%;
+    }
+    article header {
+        flex: 1;
+    }
+    article h3 {
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+    article a {
+        color: inherit;
+    }
+    article a:hover {
+        text-decoration: underline;
+        line-height: 1.2rem;
+        margin-bottom: 4px;
+    }
+    article p {
+        font-size: .75rem;
+    }
+    article h3 span {
+        color: oklch(82.8% 0.189 84.429);
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        font-size: 0.6rem;
+    }
+    footer span {
+        border-radius: 6px;
+        background-color: oklch(96.2% 0.059 95.617);
+        color: oklch(37% 0.013 285.805);
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.2rem 0.6rem;
+    }
+</style>
