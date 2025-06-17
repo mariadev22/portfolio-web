@@ -2,7 +2,7 @@
   "basics": {
     "name": "María Martínez",
     "label": "Full Stack developer orientada al detalle, dedicada a desarrollar productos de alta calidad.",
-    "image": "../assets/image/image-profile.jpg",
+    "image": "/image-profile.jpg",
     "email": "mariamartinezdev22@gmail.com",
     "phone": "+58 4261878763",
     "url": "",
