@@ -7,7 +7,7 @@
 
 ## 🖼 Captura de pantalla
 
-> _(Agrega aquí una imagen o gif mostrando tu portafolio terminado)_
+![Portfolio](/public/image-portfolio.png)
 
 ---
 
