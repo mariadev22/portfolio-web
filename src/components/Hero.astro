@@ -8,7 +8,7 @@ import GitHub from '../assets/icons/GitHub.astro'
 import LinkedIn from '../assets/icons/LinkedIn.astro'
 
 
-const { name, label, image, location, profiles, phone, email } = basics
+const { name, label, location, profiles, phone, email } = basics
 const { city, region } = location
 
 const SOCIAL_ICONS: Record<string, any> = {
@@ -73,7 +73,7 @@ const linkedUrl = linkedInfo?.url
             </footer>
         </div>
         <figure>
-            <img src={image} alt={name} />
+            <img src="../assets/image/image-profile.jpg" alt={name} />
         </figure>
     </div>
 </Section>
