@@ -1,14 +1,20 @@
 ---
 import Section from '../components/Section.astro'
 
-import { certificates } from '../data/cv.json'
+export interface CertificatesProps {
+    data: any;
+}
+
+const { data } = Astro.props;
+const { certificates } = data;
 ---
 
 <!-- Work Experience -->
 <Section title="Certificados">
     <ul>
        {
-        certificates.map(({name, date, issuer, url}) => {
+        certificates.map(({name, date, issuer, url}: 
+        {name: string, date: string, issuer: string, url: string}) => {
             const year = new Date(date).getFullYear()
             return (
                 <li>

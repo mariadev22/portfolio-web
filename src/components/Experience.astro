@@ -1,14 +1,20 @@
 ---
 import Section from '../components/Section.astro'
 
-import { work } from '../data/cv.json'
+export interface ExperienceProps {
+    data: any;
+}
+
+const { data } = Astro.props;
+const { work } = data;
 ---
 
 <!-- Work Experience -->
 <Section title="Experiencia laboral">
     <ul>
        {
-        work.map(({name, startDate, endDate, position, summary}) => {
+        work.map(({name, startDate, endDate, position, summary}: 
+        {name: string, startDate: string, endDate: string, position: string, summary: string}) => {
             const startYear = new Date(startDate).getFullYear()
             const endYear = endDate != null ? new Date(endDate).getFullYear() : "Actual"
             const years = `${startYear} - ${endYear}`

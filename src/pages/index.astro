@@ -8,16 +8,27 @@ import Hero from '../components/Hero.astro';
 import Projects from '../components/Projects.astro';
 import Skills from '../components/Skills.astro';
 import KeyboardManager from '../components/KeyboardManager.astro'
+
+const baseUrl = import.meta.env.PUBLIC_API_URL;
+
+let data = null;
+
+try {
+    const response = await fetch(`${baseUrl}/api/cv`);
+    data = await response.json();
+} catch (error) {
+    console.error("Error al obtener los datos:", error);
+}
 ---
 
 <Layout>
 	<main>
-		<Hero />
-		<About />
-		<Education />
-		<Certificates />
-		<Projects />
-		<Skills />
+		<Hero data={data} />
+		<About data={data} />
+		<Education data={data} />
+		<Certificates data={data} />
+		<Projects data={data} />
+		<Skills data={data} />
 	</main>
 	<KeyboardManager />
 </Layout>

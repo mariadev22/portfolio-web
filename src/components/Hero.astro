@@ -1,5 +1,4 @@
 ---
-import { basics } from '../data/cv.json'
 import Section from '../components/Section.astro'
 import WorldMap from '../assets/icons/WorldMap.astro'
 import Mail from '../assets/icons/Mail.astro'
@@ -7,8 +6,13 @@ import Phone from '../assets/icons/Phone.astro'
 import GitHub from '../assets/icons/GitHub.astro'
 import LinkedIn from '../assets/icons/LinkedIn.astro'
 
+export interface HeroProps {
+    data: any;
+}
 
-const { name, label, image, location, profiles, phone, email } = basics
+const { data } = Astro.props;
+const { basics } = data;
+const { name, label, image, location, profiles, phone, email } = basics;
 const { city, region } = location
 
 const SOCIAL_ICONS: Record<string, any> = {
@@ -16,7 +20,7 @@ const SOCIAL_ICONS: Record<string, any> = {
     LinkedIn
 }
 
-const linkedInfo = profiles.find(({network}) => network === "LinkedIn")
+const linkedInfo = profiles.find(({network}: {network: string}) => network === "LinkedIn")
 const linkedUrl = linkedInfo?.url
 ---
 
@@ -56,7 +60,7 @@ const linkedUrl = linkedInfo?.url
                     )
                 }
                 {
-                    profiles.map(({ network, url }) => {
+                    profiles.map(({ network, url }: { network: string, url: string }) => {
                         const Icon = SOCIAL_ICONS[network]
 
                         return (

@@ -1,14 +1,20 @@
 ---
 import Section from '../components/Section.astro'
 
-import { education } from '../data/cv.json'
+export interface EducationProps {
+    data: any;
+}
+
+const { data } = Astro.props;
+const { education } = data;
 ---
 
 <!-- Education -->
 <Section title="Educación">
     <ul>
        {
-        education.map(({institution, url, area, startDate, endDate, course, }) => {
+        education.map(({institution, url, area, startDate, endDate, course}: 
+        {institution: string, url: string, area: string, startDate: string, endDate: string, course: string}) => {
             const startYear = startDate ? new Date(startDate).getFullYear() : null
             const endYear = endDate ? new Date(endDate).getFullYear() : "Actual"
             const years = startYear ? `${startYear} - ${endYear}` : `${endYear}`

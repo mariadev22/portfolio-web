@@ -1,13 +1,17 @@
 ---
 import Section from '../components/Section.astro'
 
-import { basics } from '../data/cv.json'
-const { summary } = basics
+
+export interface AboutProps {
+    data: any;
+}
+
+const { data } = Astro.props;
+const { basics } = data;
+const { summary } = basics;
 ---
 
 <!-- About -->
 <Section title="Sobre mí">
-    <p>
-        {summary}
-    </p>
+    <p>{summary}</p>
 </Section>

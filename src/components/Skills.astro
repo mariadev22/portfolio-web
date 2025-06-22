@@ -1,14 +1,19 @@
 ---
 import Section from '../components/Section.astro'
 
-import { skills } from '../data/cv.json'
+export interface SkillsProps {
+    data: any;
+}
+
+const { data } = Astro.props;
+const { skills } = data;
 ---
 
 <!-- Skills -->
 <Section title="Habilidades">
     <ul>
         {
-            skills.map(({name}) => (
+            skills.map(({name}: {name: string}) => (
                 <li>
                     <samp>{name}</samp>
                 </li>

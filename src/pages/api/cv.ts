@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { MongoClient } from "mongodb";
 
-const uri = import.meta.env.MONGO_URI;
+const uri = import.meta.env.MONGODB_URI!;
 const client = new MongoClient(uri);
 
 export const GET: APIRoute = async ({ request }) => {
